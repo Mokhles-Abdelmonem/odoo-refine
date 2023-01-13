@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_refine_odoo_refine,odoo_refine.odoo_refine,model_odoo_refine_odoo_refine,base.group_user,1,1,1,1
