@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+    id="menu_odoo_refine"
+    web_icon="odoo_refine.odoo_refine,static/description/icon.png"
+    name="Odoo Refine"
+    sequence="0"/>
+
+
+    <menuitem
+        id="menu_data_master"
+        name="Data"
+        parent="menu_odoo_refine"
+        sequence="0"/>
+
+    <menuitem
+        id="menu_projects_master"
+        name="Created projects"
+        parent="menu_odoo_refine"
+        sequence="0"/>
+</odoo>

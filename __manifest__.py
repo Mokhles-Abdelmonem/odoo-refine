@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': "odoo_refine",
 
@@ -20,16 +19,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['mail'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/ir.model.access.csv',
+        'views/menu.xml',
+        'views/file_view.xml',
+        # 'views/refine_dashboard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
+    'sequence': -100,
+    'application': True,
+
 }
+# -*- coding: utf-8 -*-

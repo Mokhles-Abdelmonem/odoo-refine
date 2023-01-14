@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_files_tree" model="ir.ui.view">
+        <field name="name">odoo_refine.odoo_refine.view.tree</field>
+        <field name="model">odoo_refine.odoo_refine</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="file"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_file_form" model="ir.ui.view">
+        <field name="name">odoo_refine.odoo_refine.view.tree</field>
+        <field name="model">odoo_refine.odoo_refine</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="file"/>
+                            <button name="read_file" string="Read file" type="object"
+                                    help="on click a message will show in the log"
+                                    class="oe_highlight"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_odoo_files" model="ir.actions.act_window">
+        <field name="name">Files</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">odoo_refine.odoo_refine</field>
+        <field name="view_mode">tree,form</field>
+        <!--        <field name="context">{'search_default_filter_male': 1, 'search_default_group_by_gender': 1}</field>-->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Upload your files
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+            id="menu_files_master"
+            name="Files"
+            parent="menu_data_master"
+            action="action_odoo_files"
+            sequence="10"/>
+
+</odoo>
