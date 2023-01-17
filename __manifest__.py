@@ -26,7 +26,7 @@
         'security/ir.model.access.csv',
         'views/menu.xml',
         'views/file_view.xml',
-        # 'views/refine_dashboard.xml',
+        'views/refine_dashboard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
@@ -34,6 +34,5 @@
     ],
     'sequence': -100,
     'application': True,
-
 }
 # -*- coding: utf-8 -*-

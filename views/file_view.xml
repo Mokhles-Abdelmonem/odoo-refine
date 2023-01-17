@@ -7,6 +7,13 @@
             <tree>
                 <field name="name"/>
                 <field name="file"/>
+                <field name="state" invisible="1"/>
+                <button name="start_project" string="Create Project" type="object"
+                        help="on click a project created"
+                        class="oe_highlight" states="no_project"/>
+                <button name="start_refining" string="Start refining" type="object"
+                        help="on click a project created"
+                        class="btn-success" states="has_project"/>
             </tree>
         </field>
     </record>
@@ -22,9 +29,7 @@
                         </group>
                         <group>
                             <field name="file"/>
-                            <button name="read_file" string="Read file" type="object"
-                                    help="on click a message will show in the log"
-                                    class="oe_highlight"/>
+                            <field name="state"/>
                         </group>
                     </group>
                 </sheet>
